@@ -1,0 +1,17 @@
+/----------- Cliente -----------\
+CREATE TABLE [dbo].[Cliente] (
+    [Id]    UNIQUEIDENTIFIER NOT NULL,
+    [Nome]  VARCHAR (50)     NOT NULL,
+    [Email] VARCHAR (50)     NOT NULL,
+    [Senha] VARCHAR (50)     NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+/----------- Produto -----------\
+CREATE TABLE [dbo].[Produto] (
+    [Id]                UNIQUEIDENTIFIER NOT NULL,
+    [Nome]              VARCHAR (50)     NOT NULL,
+    [PrecoUnitario]     DECIMAL (18, 2)  NOT NULL,
+    [QuantidadeEstoque] INT              NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
