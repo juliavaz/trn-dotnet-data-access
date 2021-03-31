@@ -19,7 +19,7 @@ namespace TrnDotnetDataAccess
             //----- Produto -----\\
             //GravarNovoProduto();
             //ListarProdutos();
-            ExcluirProduto();
+            //ExcluirProduto();
 
             Console.ReadKey();
         }
@@ -87,9 +87,8 @@ namespace TrnDotnetDataAccess
             {
                 Console.WriteLine($"ID: {item.Id} \n- Nome: {item.Nome}  - Email: {item.Email}");
             }
-
-
         }
+        
         private static void ExcluirCliente()
         {
             IniciarConexao();
@@ -98,7 +97,7 @@ namespace TrnDotnetDataAccess
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandText = "delete from Cliente where id=@id";
 
-            var clienteId = "c180493e-21a7-44a3-84b8-7f59ae629e4f";
+            var clienteId = "be0e2280-f5d8-49f6-bec1-86126b057160";
             sqlCommand.Parameters.Add(new SqlParameter("@id", clienteId));
 
             var qtdRows = sqlCommand.ExecuteNonQuery();
@@ -175,7 +174,7 @@ namespace TrnDotnetDataAccess
             SqlCommand.Connection = sqlConnection;
             SqlCommand.CommandText = "DELETE FROM Produto WHERE id=@id";
 
-            var produtoId = "bc66e8d0-d8be-4d25-b9cc-4eb8024cafba";
+            var produtoId = "ca314781-8710-4c81-a694-0ea7003b9212";
             SqlCommand.Parameters.Add(new SqlParameter("@id", produtoId));
 
             var qtdRows = SqlCommand.ExecuteNonQuery();
